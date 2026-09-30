@@ -1,0 +1,88 @@
+# PostForge Configuration
+# Copy this to postforge.config.yaml and fill in your details.
+
+# Your name (shown on cards and in post footers)
+name: "Your Name"
+
+# Your tagline or title (shown on card footers)
+tagline: "Software Engineer"
+
+# Your niche (used for content generation context)
+niche: "software engineering and web development"
+
+# Brand colors for your cards
+brand:
+  # Accent color for highlights, tags, and emphasis
+  accent: "#c8ff00"
+  # Gradient overlay style: "dark" or "light"
+  theme: "dark"
+
+# Post types your pipeline rotates through.
+# id: internal identifier
+# label: shown on the card tag pill (keep it short, uppercase)
+# description: tells the AI what kind of post to write
+# weight: how often this type appears in rotation (higher = more frequent)
+topics:
+  - id: "tip"
+    label: "PRO TIP"
+    description: "Share one specific, actionable technique from your work. Be concrete. Name tools, patterns, or workflows."
+    weight: 3
+
+  - id: "industry-take"
+    label: "HOT TAKE"
+    description: "React to a trending topic from the source feeds. Take a stance. Not a summary, a perspective."
+    weight: 2
+
+  - id: "tool-review"
+    label: "TOOL REVIEW"
+    description: "Give an honest take on a tool you use. What's good, what's bad, when to use it."
+    weight: 2
+
+  - id: "career-lesson"
+    label: "CAREER LESSON"
+    description: "Share a lesson learned from your professional experience. Be specific, not generic advice."
+    weight: 1
+
+  - id: "explainer"
+    label: "EXPLAINED"
+    description: "Break down a concept in your field. Make it accessible but still valuable for experienced professionals."
+    weight: 1
+
+  - id: "behind-the-scenes"
+    label: "BEHIND THE SCENES"
+    description: "Show what your day-to-day actually looks like. The real work, not the highlight reel."
+    weight: 1
+
+# Where to pull trending content from.
+# The AI reacts to these sources instead of making up generic posts.
+sources:
+  # Reddit subreddits (no r/ prefix)
+  reddit:
+    - "programming"
+    - "webdev"
+    - "ExperiencedDevs"
+
+  # RSS feed URLs from industry publications
+  rss:
+    - url: "https://dev.to/feed"
+      name: "Dev.to"
+    - url: "https://hnrss.org/frontpage"
+      name: "Hacker News"
+
+  # Google News search queries for your niche
+  news_keywords:
+    - "software engineering"
+    - "web development trends"
+
+# Where to deliver the generated posts.
+delivery:
+  # Discord webhook URL. Create one in your Discord server:
+  # Server Settings > Integrations > Webhooks > New Webhook
+  discord_webhook: ""
+
+# Cron schedule (when to generate posts)
+# Default: 9am daily. Format: minute hour day month weekday
+schedule: "0 9 * * *"
+
+# Your timezone
+timezone: "America/New_York"

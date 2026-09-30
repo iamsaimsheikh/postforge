@@ -1,0 +1,33 @@
+{
+  "name": "postforge",
+  "version": "1.0.0",
+  "description": "AI-powered LinkedIn content pipeline. Configure your niche, plug in your sources, get daily posts. By Edge of Tech.",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "generate": "tsx src/index.ts --once",
+    "schedule": "tsx src/schedule.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "js-yaml": "^4.1.0",
+    "node-cron": "^3.0.3",
+    "satori": "^0.12.1",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.10.0",
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "author": "Edge of Tech <hello@edgeof.tech>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iamsaimsheikh/postforge"
+  }
+}
