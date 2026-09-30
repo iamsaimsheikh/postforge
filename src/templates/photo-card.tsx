@@ -59,7 +59,8 @@ export function PhotoCard({
         position: "relative",
         overflow: "hidden",
         fontFamily: "Inter",
-        background: photoSrc ? undefined : fallbackBg,
+        // satori throws on `background: undefined`, so omit the key when a photo is set
+        ...(photoSrc ? {} : { background: fallbackBg }),
       }}
     >
       {photoSrc ? (

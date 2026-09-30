@@ -14,6 +14,7 @@
     "@anthropic-ai/sdk": "^0.39.0",
     "js-yaml": "^4.1.0",
     "node-cron": "^3.0.3",
+    "react": "^19.3.0",
     "satori": "^0.12.1",
     "sharp": "^0.33.5"
   },

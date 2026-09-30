@@ -7,7 +7,7 @@ export async function generate(
   options?: { system?: string; maxTokens?: number; model?: string },
 ): Promise<string> {
   const response = await client.messages.create({
-    model: options?.model ?? "claude-sonnet-4-5-20250514",
+    model: options?.model ?? "claude-sonnet-4-5",
     max_tokens: options?.maxTokens ?? 4096,
     system: options?.system,
     messages: [{ role: "user", content: prompt }],
